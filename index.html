@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weston AI - 智能对话助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="new-chat">
+                <button id="newChatBtn">
+                    <i class="fas fa-plus"></i> 新对话
+                </button>
+            </div>
+            <div class="chat-history-list" id="chatHistoryList">
+                <!-- 历史对话列表将在这里动态生成 -->
+            </div>
+        </aside>
+
+        <main class="chat-container">
+            <div class="model-select">
+                <select id="modelSelect">
+                    <option value="deepseek-chat">Weston AI</option>
+                    <option value="deepseek-coder">Weston Coder</option>
+                    <!-- 添加更多模型选项 -->
+                </select>
+            </div>
+            
+            <div class="chat-history" id="chatHistory">
+                <div class="message ai-message">
+                    <div class="avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="model-name">Weston AI</span>
+                        </div>
+                        <div class="message-text">
+                            你好！我是 Weston，一个强大的AI助手。我能帮你解决各种问题，请告诉我你需要什么帮助。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <textarea id="userInput" placeholder="输入消息，按Enter发送（Shift + Enter换行）"></textarea>
+                <button id="sendButton">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html> 
